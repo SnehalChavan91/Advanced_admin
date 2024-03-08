@@ -6,6 +6,10 @@ from .models import Author,Reader,Editor
 
 class AuthorAdmin(admin.ModelAdmin):
     
-    empty_value_display="-empty-"
+    list_display=["name","title","view_birth_date"]
+
+    @admin.display(empty_value='???')
+    def view_birth_date(self,obj):
+        return obj.birth_date
 
 admin.site.register(Author,AuthorAdmin)
