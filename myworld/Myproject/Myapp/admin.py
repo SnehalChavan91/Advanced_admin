@@ -6,8 +6,6 @@ from .models import Author,Reader,Editor
 
 class AuthorAdmin(admin.ModelAdmin):
     
-    actions_on_top=False
-    actions_on_bottom=True
-    date_hierarchy = "pub_date"
-    
+    empty_value_display="-empty-"
+
 admin.site.register(Author,AuthorAdmin)
