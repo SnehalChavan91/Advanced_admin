@@ -6,7 +6,7 @@ class Author(models.Model):
     last_name=models.CharField(max_length=100)
     biography=models.TextField
     date_of_birth=models.DateField()
-
+    pub_date=models.DateField()
 
     def __str__(self):
         return f"{self.first_name}{self.last_name}"
