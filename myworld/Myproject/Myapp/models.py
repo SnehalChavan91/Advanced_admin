@@ -2,6 +2,14 @@ from django.db import models
 from datetime import datetime
 from django.utils import timezone
 # Create your models here.
+class Person(models.Model):
+    name=models.CharField(max_length=50,default="abcd")
+    age=models.IntegerField
+    first_name=models.CharField(max_length=100)
+    last_name=models.CharField(max_length=100)
+    color_code=models.CharField(max_length=6)
+    birthday=models.DateField()
+
 class Author(models.Model):
     name=models.CharField(max_length=100)
     title=models.CharField(max_length=3,default="Mr")
